@@ -19,25 +19,24 @@ namespace MenuShell_Inlämn
             while (true)
             {
                 var loggedInUser = loginView.Display();
-
-                var sysadminMainView = new SysadminMainView();
+    
                 if (loggedInUser.Role == "Administrator")
                 {
-                    sysadminMainView.Display();
-                }
-                //else if = receptionist...do this  OR   else = ..... do this
+                    var sysadminMainView = new SysadminMainView();
+                    var choice = sysadminMainView.Display();
 
-                if (sysadminMainView.choice == 1)
-                {
-                    AddUserView.AddUser(users);
-                }
-                else if (sysadminMainView.choice == 2)
-                {
-                    ListUsersView.ListUsers(users);
-                }
-                else if (sysadminMainView.choice == 3)
-                {
-                    Environment.Exit(0);
+                    if (choice.Key == ConsoleKey.D1)
+                    {
+                        AddUserView.AddUser(users);
+                    }
+                    else if (choice.Key == ConsoleKey.D2)
+                    {
+                        ListUsersView.ListUsers(users);
+                    }
+                    else if (choice.Key == ConsoleKey.D3)
+                    {
+                        Environment.Exit(0);
+                    }
                 }
             }
         }

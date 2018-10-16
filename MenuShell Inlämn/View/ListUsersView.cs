@@ -8,10 +8,13 @@ namespace MenuShell_Inlämn.View
     {
         public static void ListUsers(List<User> users)
         {
+            Console.Clear();
             foreach (User user in users)
             {
-                Console.WriteLine(users);
+                Console.WriteLine(user.Username);
             }
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
         }
     }
 }
