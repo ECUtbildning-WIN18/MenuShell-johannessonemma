@@ -49,10 +49,13 @@
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\IAuthenticationService.cs" />
     <Compile Include="View\AddUserView.cs" />
+    <Compile Include="View\DeleteUserView.cs" />
     <Compile Include="View\ListUsersView.cs" />
     <Compile Include="View\LoginView.cs" />
     <Compile Include="View\ReceptionistMainView.cs" />
     <Compile Include="View\SysadminMainView.cs" />
+    <Compile Include="View\UserListView.cs" />
+    <Compile Include="View\UserSearchView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
