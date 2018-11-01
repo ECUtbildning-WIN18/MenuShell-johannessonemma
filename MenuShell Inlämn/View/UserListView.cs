@@ -10,18 +10,14 @@ namespace MenuShell_Inlämn.View
     class UserListView
     {
         private readonly List<User> _users;
-        
 
         public UserListView(List<User> users)
         {
             _users = users;
         }
 
-        
-
         public string ListUsers(IEnumerable<User>  foundusers)
         {
-
             Console.Clear();
             Console.WriteLine($"The foundresults: "); 
 
